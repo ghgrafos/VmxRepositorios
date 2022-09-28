@@ -1,0 +1,53 @@
+html,
+body {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.navbar {
+    margin: 0;
+    padding: 10px;
+}
+
+#content,
+#sidebar {
+    min-height: 500px;
+}
+#row-main {
+    overflow-x: hidden; /* necessary to hide collapsed sidebar */
+}
+#content {
+    background-color: rgb(241, 241, 233);
+    margin: 0;
+    padding: 0;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+#content .btn-group {
+    margin-bottom: 10px;
+}
+.col-md-9 .width-12,
+.col-md-12 .width-9 {
+    display: none; /* just hiding labels for demo purposes */
+}
+#sidebar {
+    background-color: rgb(222, 231, 235);
+    
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+}
+.collapsed {
+    display: none; /* hide it for small displays */
+}
+@media (min-width: 992px) {
+    .collapsed {
+        display: block;
+        margin-right: -25%; /* same width as sidebar */
+    }
+}
